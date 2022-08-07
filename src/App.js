@@ -38,13 +38,15 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
-      <About />
-      <Contact />
+      <Header></Header>
+      <div>
+        <About />
+        <Contact />
 
-      <Project />
-      <Resume />
-      <Footer />
+        <Project />
+        <Resume />
+      </div>
+      <Footer></Footer>
     </div>
   );
 }

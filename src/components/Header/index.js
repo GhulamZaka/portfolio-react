@@ -1,11 +1,22 @@
-import React from "react";
+import * as React from "react";
+import AppBar from "@mui/material/AppBar";
+import Box from "@mui/material/Box";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 
-function Header() {
+import Navi from "../Nav/index";
+
+export default function ButtonAppBar() {
   return (
-    <div>
-      <h2>Header</h2>
-    </div>
+    <Box sx={{ flexGrow: 1 }}>
+      <AppBar position="static">
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            Ghulam Mustafa Zaka
+          </Typography>
+          <Navi />
+        </Toolbar>
+      </AppBar>
+    </Box>
   );
 }
-
-export default Header;

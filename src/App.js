@@ -28,11 +28,13 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <body>
       <Header setPage={active} />
+
       <main>{display()}</main>
+
       <Footer />
-    </div>
+    </body>
   );
 }
 

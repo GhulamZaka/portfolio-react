@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./App.css";
 
@@ -9,29 +9,49 @@ import Resume from "./components/Resume";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 
-function App() {
-  const [activePage, active] = useState("About");
-  function display() {
-    switch (activePage) {
-      case "About":
-        return <About />;
-      case "Portfolio":
-        return <Project />;
-      case "Contact":
-        return <Contact />;
-      case "Resume":
-        return <Resume />;
+// function App() {
+//   const [activePage, active] = useState("About");
+//   function display() {
+//     switch (activePage) {
+//       case "About":
+//         return <About />;
+//       case "Portfolio":
+//         return <Project />;
+//       case "Contact":
+//         return <Contact />;
+//       case "Resume":
+//         return <Resume />;
 
-      default:
-        return <About />;
-    }
-  }
+//       default:
+//         return <About />;
+//     }
+//   }
+
+//   return (
+//     <body>
+//       <Header setPage={active} />
+
+//       <main>{display()}</main>
+
+//       <Footer />
+//     </body>
+//   );
+// }
+
+// export default App;
+
+function App() {
 
   return (
     <body>
-      <Header setPage={active} />
+      <Header />
 
-      <main>{display()}</main>
+      <main>
+        <About/>
+        <Project/>
+        <Resume/>
+        <Contact/>
+      </main>
 
       <Footer />
     </body>
